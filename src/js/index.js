@@ -26,8 +26,33 @@ function render(variables = {}) {
   console.log("These are the current variables: ", variables); //print on the console
   // here we ask the logical questions to make decisions on how to build the html
   // if includeCover==false then we reset the cover code without the <img> tag to make the cover transparent.
+
   let cover = `<div class="cover"><img src="${variables.background}" /></div>`;
   if (variables.includeCover == false) cover = "<div class='cover'></div>";
+
+  let myName = "Lucy";
+  if (variables.name != null) myName = variables.name;
+
+  let myLastname = "Boilett";
+  if (variables.lastname != null) myLastname = variables.lastname;
+  let myrole = "";
+  if (variables.role != null) myrole = variables.role;
+  let country = "";
+  if (variables.country != null) country = variables.country;
+  let city = "";
+  if (variables.city != null) city = variables.country;
+  if (variables.city != null) city = variables.city;
+  let mySocialMeadiaPosition = "position right";
+  if (variables.socialMediaPosition != null)
+    mySocialMeadiaPosition = variables.socialMediaPosition;
+  let twitter = "IHasUrSoup";
+  if (variables.twitter != null) twitter = variables.twitter;
+  let github = "Dcouncildev";
+  if (variables.github != null) github = variables.github;
+  let linkedin = "DwightCouncil";
+  if (variables.linkedin != null) linkedin = variables.linkedin;
+  let instagram = "dephmefesto";
+  if (variables.instagram != null) instagram = variables.instagram;
 
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
